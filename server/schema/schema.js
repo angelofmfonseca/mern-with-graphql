@@ -1,5 +1,3 @@
-const { projects, clients } = require("../sampleData");
-
 const Client = require("../models/Client");
 const Project = require("../models/Project");
 
@@ -11,7 +9,6 @@ const {
   GraphQLList,
 } = require("graphql");
 
-// Client Type
 const ClientType = new GraphQLObjectType({
   name: "client",
   fields: () => ({
@@ -22,7 +19,6 @@ const ClientType = new GraphQLObjectType({
   }),
 });
 
-// Project Type
 const ProjectType = new GraphQLObjectType({
   name: "project",
   fields: () => ({
@@ -39,7 +35,6 @@ const ProjectType = new GraphQLObjectType({
   }),
 });
 
-// Root query object
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
